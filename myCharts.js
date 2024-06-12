@@ -1,13 +1,10 @@
-import * as echarts from 'echarts';
-
-var ROOT_PATH = 'https://echarts.apache.org/examples';
-
 var chartDom = document.getElementById('main');
 var myChart = echarts.init(chartDom);
 var option;
 
 myChart.showLoading();
-$.get(ROOT_PATH + '/data/asset/data/flare.json', function (data) {
+// change the input file here
+$.get('assets/flare.json', function (data) {
   myChart.hideLoading();
   myChart.setOption(
     (option = {
